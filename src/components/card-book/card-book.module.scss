@@ -1,0 +1,229 @@
+.card_item {
+    position: relative;
+    width: 190px;
+    height: 470px;
+    box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 10px;
+
+    .card_wrapper {
+        width: 174px;
+        margin: 0 auto;
+        padding: 8px 0 16px;
+
+        .book_rating {
+            margin-top: 16px;
+            margin-bottom: 15px;
+            color: #A7A7A7;
+        }
+
+        .book_title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            height: 55px;
+        }
+
+        .book_author {
+            color: #727272;
+        }
+
+        .card_btn {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 166px;
+            height: 40px;
+            background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .card_btn_reserved {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 166px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #BFC4C9;
+            background: #FFFFFF;
+
+        }
+
+        .card_btn:disabled {
+            background: #F9F9FA;
+            border: 1px solid #BFC4C9;
+            cursor: auto;
+            color: #A7A7A7;
+        }
+    }
+}
+
+.card_list_item {
+    box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 24px 24px 24px 16px;
+
+    .card_list_wrapper {
+        display: flex;
+
+        .content_card_list {
+            width: 649px;
+            margin-left: 16px;
+
+            .book_list_title {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 32px;
+                margin-bottom: 8px;
+            }
+
+            .book_list_author {
+                font-size: 16px;
+                color: #727272;
+                margin-bottom: 24px;
+            }
+
+            .list_container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .book_list_rating {
+                    color: #A7A7A7;
+                }
+                
+                .book_list_btn {
+
+                    .card_list_btn {
+                        width: 174px;
+                        height: 40px;
+                        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                        border-radius: 20px;
+                        cursor: pointer;
+                        border: none;
+                        font-weight: 600;
+                        font-size: 12px;
+                        letter-spacing: 0.2px;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                    }
+
+                    .card_list_btn_reserved {
+                        width: 174px;
+                        height: 40px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        background: #F9F9FA;
+                        border: 1px solid #BFC4C9;
+                        font-weight: 600;
+                        font-size: 12px;
+                        letter-spacing: 0.2px;
+                        text-transform: uppercase;
+                        color: #A7A7A7;
+                    }
+
+                    .card_list_btn:disabled {
+                        background: #F9F9FA;
+                        border: 1px solid #BFC4C9;
+                        cursor: auto;
+                        color: #A7A7A7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card_list_item {
+        .card_list_wrapper {
+            .content_card_list {
+                width: 464px;
+
+                .book_list_author {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .card_item {
+        margin-top: 16px;
+        width: 288px;
+
+        .card_wrapper {
+            width: 256px;
+
+            .book_img img {
+                margin: 0 auto;
+            }
+
+            .card_btn, .card_btn_reserved {
+                width: 256px;
+            }
+        }
+    }
+
+    .card_list_item {
+        padding: 16px 16px 16px 8px;
+
+        .card_list_wrapper {
+            .list_book_img {
+                width: 70px;
+            }
+            .content_card_list {
+                width: 186px;
+                margin-left: 8px;
+
+                .book_list_title {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-bottom: 3px;
+                }
+
+                .book_list_author {
+                    font-size: 12px;
+                    margin-bottom: 3px;
+                }
+
+                .list_container {
+                    display: block;
+
+                    .book_list_rating {
+                        margin-bottom: 16px;
+                        div {
+                            width: 104px;
+                            svg {
+                                width: 16px;
+                            }
+                        }
+                    }
+
+                    .book_list_btn {
+                        .card_list_btn, .card_list_btn_reserved {
+                            width: 186px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

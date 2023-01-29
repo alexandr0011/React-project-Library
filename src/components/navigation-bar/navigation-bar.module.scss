@@ -1,0 +1,168 @@
+.search_mobil_input, .search_mobil_show {
+    display: none;
+}
+
+.wrapper {
+    max-width: 825px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search_filter_block {
+        width: 516px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .search_btn {
+            display: none;
+        }
+
+        .search_link {
+            position: absolute;
+            top: 11px;
+            left: 16px;
+            width: 16px;
+            height: 16px;
+            background: url(../../resources/svg/search.svg) 0 0/cover no-repeat;
+        }
+
+        .cross_btn {
+            position: absolute;
+            top: 11px;
+            left: 318px;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            background: none;
+            border: none;
+        }
+
+        .search_input {
+            input {
+                width: 350px;
+                height: 38px;
+                box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+                border-radius: 599px;
+                border: none;
+                padding: 0 40px;
+                letter-spacing: 0.1px;
+                caret-color: #F83600;
+            }
+
+            input::-webkit-input-placeholder {
+                color: #A7A7A7;
+            }
+
+            input:active, input:hover, input:focus {
+                outline: 0;
+            }
+
+            input:focus + .search_link {
+                background: url(../../resources/svg/search_active.svg) 0 0/cover no-repeat;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 640px;
+
+        .search_filter_block {
+            width: 440px;
+
+            .cross_btn {
+                left: 244px;
+            }
+
+            .search_input {
+                input {
+                    max-width: 274px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .search_mobil_show {
+        max-width: 288px;
+        margin: 0 auto;
+        padding: 20px 0;
+        position: relative;
+        display: none;
+    }
+
+    .search_mobil_input {
+        max-width: 288px;
+        margin: 0 auto;
+        padding-top: 16px;
+        position: relative;
+        display: block;
+
+        input {
+            width: 288px;
+            height: 38px;
+            box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+            border-radius: 599px;
+            border: none;
+            letter-spacing: 0.1px;
+            caret-color: #F83600;
+            padding: 0 32px 0 16px;
+        }
+        
+        input::-webkit-input-placeholder {
+            color: #A7A7A7;
+        }
+
+        input:active, input:hover, input:focus {
+            outline: 0;
+        }
+
+        .cross_btn {
+            position: absolute;
+            top: 31px;
+            right: 16px;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            background: none;
+            border: none;
+        }
+    }
+
+    .wrapper {
+        padding: 0 10px;
+
+        .search_filter_block {
+            width: 80px;
+
+            .search_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: none;
+                background: none;
+                box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+            }
+
+            .search_input {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 288px;
+        padding: 0;
+    }
+}
